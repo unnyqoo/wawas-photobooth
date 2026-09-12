@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Wawa's Photo Booth | Vintage & Y2K Photo Booth</title>
+  
+  <!-- Open Graph Meta Tags for Social Previews (LINE, Facebook, IG, WhatsApp) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Wawa's Photo Booth | Vintage & Y2K Aesthetic Photo Strip Studio">
+  <meta property="og:description" content="Make a little memory. Pick from 28 vintage styles, customize with handwritten notes and cute stickers, and leave with an authentic photo strip.">
+  <meta property="og:image" content="assets/models/wawa.jpg">
+  <meta property="og:site_name" content="Wawa's Photo Booth">
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Wawa's Photo Booth | Vintage & Y2K Photo Booth">
+  <meta name="twitter:description" content="Make a little memory. Pick from 28 vintage styles, customize with handwritten notes and cute stickers.">
+  <meta name="twitter:image" content="assets/models/wawa.jpg">
+
+  <!-- Mobile Browser Theme Color -->
+  <meta name="theme-color" content="#fcfaf8">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+
+  <!-- Google Fonts: Thai & English Handwritten, Serif, Sans, and Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Charm:wght@400;700&family=DM+Mono:ital,wght@0,400;0,500;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=Gaegu:wght@400;700&family=Instrument+Serif:ital@0;1&family=Itim&family=Mali:ital,wght@0,400;0,600;0,700;1,400&family=Prompt:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Pacifico&family=VT323&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            background: 'hsl(var(--background))',
+            foreground: 'hsl(var(--foreground))',
+            border: 'hsl(var(--border))',
+            input: 'hsl(var(--input))',
+            ring: 'hsl(var(--ring))',
+            card: {
+              DEFAULT: 'hsl(var(--card))',
+              foreground: 'hsl(var(--card-foreground))',
+              border: 'hsl(var(--card-border))'
+            },
+            popover: {
+              DEFAULT: 'hsl(var(--popover))',
+              foreground: 'hsl(var(--popover-foreground))',
+              border: 'hsl(var(--popover-border))'
+            },
+            primary: {
+              DEFAULT: 'hsl(var(--primary))',
+              foreground: 'hsl(var(--primary-foreground))'
+            },
+            secondary: {
+              DEFAULT: 'hsl(var(--secondary))',
+              foreground: 'hsl(var(--secondary-foreground))'
+            },
+            muted: {
+              DEFAULT: 'hsl(var(--muted))',
+              foreground: 'hsl(var(--muted-foreground))'
+            },
+            accent: {
+              DEFAULT: 'hsl(var(--accent))',
+              foreground: 'hsl(var(--accent-foreground))'
+            }
+          },
+          fontFamily: {
+            sans: ['"DM Sans"', '"Prompt"', 'sans-serif'],
+            serif: ['"Instrument Serif"', 'Georgia', 'serif'],
+            mono: ['"DM Mono"', 'monospace'],
+            mali: ['"Mali"', 'cursive'],
+            charm: ['"Charm"', 'cursive'],
+            itim: ['"Itim"', 'cursive'],
+            caveat: ['"Caveat"', 'cursive'],
+            gaegu: ['"Gaegu"', 'cursive'],
+            prompt: ['"Prompt"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Authentic Y2K Theme Stylesheet -->
+  <link rel="stylesheet" href="css/y2k-theme.css">
+</head>
+<body class="bg-background text-foreground antialiased selection:bg-primary/20">
+
+  <!-- Screen Flash Animation Overlay for Photo Capture -->
+  <div id="screen-flash" class="pointer-events-none fixed inset-0 z-[100] bg-white opacity-0 transition-opacity duration-200"></div>
+
+  <!-- Root Application Container -->
+  <div id="app"></div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="fixed bottom-6 right-6 z-50 flex flex-col gap-2 pointer-events-none"></div>
+
+  <!-- Main ES Module Application Script -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
